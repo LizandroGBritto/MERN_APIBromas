@@ -1,7 +1,7 @@
 const JokesModel = require("models/jokes.model");
 
 module.exports = {
-    getAllJokess: (req, res) => {
+    getAllJokes: (req, res) => {
         JokesModel.find()
             .then((allJokess) => res.json({ jokes: allJokess }))
             .catch((err) =>
@@ -36,7 +36,7 @@ module.exports = {
                 res.json({ message: "Something went wrong", error: err })
             );
     },
-    deleteAllJokess: (req, res) => {
+    deleteAllJokes: (req, res) => {
         JokesModel.deleteMany({})
             .then((result) => res.json({ result: result }))
             .catch((err) =>
