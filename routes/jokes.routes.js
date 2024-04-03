@@ -8,7 +8,7 @@ const {
     deleteOneJokesById,
     deleteAllJokess,
     getRandomJokes
-} = require("../controllers/jokes.controller");
+} = require("controllers/jokes.controller");
 
 const JokesRouter = express.Router();
 
